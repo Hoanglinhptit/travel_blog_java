@@ -1,16 +1,15 @@
-package entities;
+package com.example.travel_blog_java.entities;
 import jakarta.persistence.*;
 import java.util.List;
 import java.time.LocalDateTime;
-public class Tags {
+public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(unique = true)
     private String name;
 
-    @OneToMany(mappedBy = "tags")
+    @OneToMany(mappedBy = "category")
     private List<Post> posts;
 
     private LocalDateTime createdAt = LocalDateTime.now();

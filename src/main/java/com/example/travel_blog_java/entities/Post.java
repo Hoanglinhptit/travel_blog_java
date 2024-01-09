@@ -1,7 +1,12 @@
-package entities;
+package com.example.travel_blog_java.entities;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
+enum Status {
+pending,
+approved,
+    cancel
+}
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,7 +20,7 @@ public class Post {
     private String content;
 
     @ManyToOne
-    @JoinColumn(name = "authorId")
+    @JoinColumn(name = "id", nullable = false)
     private Users author;
 
     @OneToMany(mappedBy = "post")
@@ -31,6 +36,14 @@ public class Post {
     @Enumerated(EnumType.STRING)
     private Status status = Status.pending;
 
+    @Column(nullable = false)
     private Integer views = 1;
-    //
+
+    // Constructors, getters, and setters
+
+    @PreUpdate
+    public void preUpdate() {
+        // Increment views before update
+        this.views++;
+    }
 }
