@@ -18,4 +18,5 @@ public class Users {
 
     @OneToMany(mappedBy = "author")
     private List<Post> posts;
+    //
 }

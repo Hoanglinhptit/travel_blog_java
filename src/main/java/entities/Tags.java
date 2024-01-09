@@ -16,4 +16,5 @@ public class Tags {
     private LocalDateTime createdAt = LocalDateTime.now();
 
     private LocalDateTime updatedAt;
+    //
 }

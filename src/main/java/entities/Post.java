@@ -32,4 +32,5 @@ public class Post {
     private Status status = Status.pending;
 
     private Integer views = 1;
+    //
 }

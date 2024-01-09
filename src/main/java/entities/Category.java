@@ -15,4 +15,5 @@ public class Category {
     private LocalDateTime createdAt = LocalDateTime.now();
 
     private LocalDateTime updatedAt;
+    //
 }
