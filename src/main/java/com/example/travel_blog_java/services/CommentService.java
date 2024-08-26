@@ -2,7 +2,7 @@ package com.example.travel_blog_java.services;
 
 import com.example.travel_blog_java.entities.Comment;
 
-public interface CommentServices {
+public interface CommentService {
     Comment insertComment(CommentDTO comment);
 
     void deleteComment(Long commentId);

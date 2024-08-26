@@ -1,4 +1,4 @@
 package com.example.travel_blog_java.services;
 
-public interface TagServices {
+public interface TokenService {
 }
